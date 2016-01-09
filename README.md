@@ -23,7 +23,7 @@ Specify apartment size with 'br' argument (defaults to 1):
 $ scrapy crawl cl_apt -a regional_url=http://sfbay.craigslist.org/search/sby/apa -a br=2 
 ```
 
-Specify the analysize metric with 'metric' argument (Accepts either mean or median; defaults to median):
+Specify the analysis metric with 'metric' argument (Accepts either mean or median; defaults to median):
 ```
 $ scrapy crawl cl_apt -a regional_url=http://sfbay.craigslist.org/search/sby/apa -a br=2 -a metric=mean
 ```
