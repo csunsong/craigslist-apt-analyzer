@@ -10,26 +10,26 @@ Provides an easy Scrapy-based tool to search, collect, and analyze apartment ren
 
 <b>Usage:</b>
 
-```
+```unix
 $ cd craigslist-apt-Analyzer
 ```
 Pass in a regional craigslist apartment listing URL as an argument:
-```
+```unix
 $ scrapy crawl cl_apt -a regional_url=http://sfbay.craigslist.org/search/sby/apa
 ```
 
 Specify apartment size with 'br' argument (defaults to 1):
-```
+```unix
 $ scrapy crawl cl_apt -a regional_url=http://sfbay.craigslist.org/search/sby/apa -a br=2 
 ```
 
 Specify the analysis metric with 'metric' argument (Accepts either mean or median; defaults to median):
-```
+```unix
 $ scrapy crawl cl_apt -a regional_url=http://sfbay.craigslist.org/search/sby/apa -a br=2 -a metric=mean
 ```
 
 Specify the page depth to search with 'search_depth' aregument (default: 25, max: 25, min: 2):
-```
+```unix
 $ scrapy crawl cl_apt -a regional_url=http://sfbay.craigslist.org/search/sby/apa -a br=2 -a search_depth=20
 ```
 
