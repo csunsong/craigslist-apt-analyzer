@@ -48,7 +48,7 @@ def parse_apt_data(data_sample, metric):
     apt_data = { 
       'location': [el[0] for el in apts],
       'price': [el[1]for el in apts], 
-      'uniq': [ str(el[1])+str(el[2]) for el in apts]
+      'uniq': [str(el[0])+str(el[1])+str(el[2]) for el in apts]
       }
 
     apt_dataframe = pd.DataFrame(apt_data).drop_duplicates(subset=['uniq'])
