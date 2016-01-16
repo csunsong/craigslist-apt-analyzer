@@ -26,7 +26,6 @@ class ClScraper(scrapy.Spider):
             price = row.xpath('span/span[3]/span[1]/text()').extract()
             room_count = row.xpath('span/span[3]/span[2]/text()').re(r'\d*br')
             area = row.xpath('span/span[3]/span[3]/small/text()').extract()
-            print(area)
             all_data_preset = False not in [len(unit) > 0 for unit in [
                 price, room_count, area]]
 
