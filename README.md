@@ -11,7 +11,7 @@ Provides an easy Scrapy-based tool to search, collect, and analyze apartment ren
 <b>Usage:</b>
 
 ```unix
-$ cd craigslist-apt-Analyzer
+$ cd craigslist-apt-analyzer
 ```
 Pass in a regional craigslist apartment listing URL as an argument:
 ```unix
