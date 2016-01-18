@@ -36,7 +36,18 @@ def plot_results(data_set):
     ]
 
     layout = go.Layout(
-        title=metric[0].capitalize() + ' Rental Prices: ' + url[0])
+        title=metric[0].capitalize() + ' Rental Prices: ' + url[0],
+        xaxis=dict(
+            tickangle=-45,
+            title='Neighborhood',
+            tickfont=dict(
+                size=8,
+            ),
+        ),
+        yaxis=dict(
+            title='$/Month'
+        ),
+    )
 
     fig = go.Figure(data=data, layout=layout)
     plot_url = py.plot(fig, filename='basic-bar')
