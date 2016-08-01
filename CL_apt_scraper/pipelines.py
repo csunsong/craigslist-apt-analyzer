@@ -77,7 +77,7 @@ def parse_apt_data(data_sample, metric):
     elif metric == 'mean':
         apt_dataframe = apt_dataframe.groupby(by="location").mean()
     else:
-        print("\n Error: metric argument can only accept 'median' or 'mean'. You put '%s' \n " % metric)
+        raise Exception("Error: metric argument can only accept 'median' or 'mean'. You put '%s' " % metric)
         return None
 
     apt_dataframe.to_csv(path_or_buf='apt_grouped_prices.csv', sep=',',)
