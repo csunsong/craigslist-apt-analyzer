@@ -13,11 +13,9 @@ Apartment_List = [['price', 'bedrooms', 'area']]
 metric = []
 url = []
 
-
 def write_to_file(filename, data_sample):
     example = csv.writer(open(filename, 'w'), dialect='excel')
     example.writerows(data_sample)
-
 
 def open_with_csv(filename, d=','):
     data = []
@@ -27,7 +25,6 @@ def open_with_csv(filename, d=','):
             data.append(line)
 
     return data
-
 
 def plot_results(data_set):
     data = [go.Bar(
@@ -52,19 +49,17 @@ def plot_results(data_set):
     fig = go.Figure(data=data, layout=layout)
     plot_url = py.plot(fig, filename='basic-bar')
 
-
 def parse_apt_data(data_sample, metric):
     price = data_sample[0].index('price')
     br = data_sample[0].index('bedrooms')
     area = data_sample[0].index('area')
 
     apts = []
-
     for row in data_sample[1:]:
         try:
             apts.append([row[area].lower(), int(
                 row[price].replace("$", '')), row[br]])
-        except:
+        except ValueError:
             print("Error in data format: ", [row[area], row[price], row[br]])
 
     apt_data = {
