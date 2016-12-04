@@ -1,6 +1,7 @@
+import re
 import scrapy
 from scrapy import Selector
-import re
+
 from CL_apt_scraper.items import AptData
 
 
