@@ -1,13 +1,14 @@
-from CL_apt_scraper.items import AptData
-from CL_apt_scraper.spiders.CLScraper import ClScraper
 import csv
+import time
+import re
 import numpy as np
 import pandas as pd
 import plotly.plotly as py
 import plotly.graph_objs as go
 from operator import itemgetter
-import time
-import re
+
+from CL_apt_scraper.items import AptData
+from CL_apt_scraper.spiders.CLScraper import ClScraper
 
 Apartment_List = [['price', 'bedrooms', 'area']]
 metric = []
@@ -78,7 +79,6 @@ def parse_apt_data(data_sample, metric):
         apt_dataframe = apt_dataframe.groupby(by="location").mean()
     else:
         raise Exception("Error: metric argument can only accept 'median' or 'mean'. You put '%s' " % metric)
-        return None
 
     apt_dataframe.to_csv(path_or_buf='apt_grouped_prices.csv', sep=',',)
 
