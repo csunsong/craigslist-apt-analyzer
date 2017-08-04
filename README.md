@@ -36,5 +36,5 @@ $ scrapy crawl cl_apt -a regional_url=http://sfbay.craigslist.org/search/sby/apa
 Raw and analyzed Apartment data will write to separate CSV files. Plotly bar chart data opens in new window. 
 
 <b>Example Output:</b>
-![Alt text] (https://github.com/csunsong/craigslist-apt-analyzer/blob/master/screenshots/SF_2br_output.png)
+![alt text](https://github.com/csunsong/craigslist-apt-analyzer/blob/master/screenshots/SF_2br_output.png)
 
